@@ -39,10 +39,10 @@ This project builds an ML-first crowd management solution focused on pilgrimage 
 - API dependencies: `model_api/requirements.txt`
 
 ### 3) Panic Detection for Safety Monitoring
-- Barricade panic detection: `panic_detection/panic_detection_in_barricade/panic.py`
-- Temple panic detection (live feed): `panic_detection/panic_detection_in_temple/prediction(panic)_on_live_feed.py`
-- Temple panic detection (video): `panic_detection/panic_detection_in_temple/prediction(panic)_on_video.py`
-- Alarm handling: `panic_detection/panic_detection_in_barricade/alarm.py`
+- Barricade panic detection: `panic_detection_YOLO/panic_detection_YOLO_in_barricade/panic.py`
+- Temple panic detection (live feed): `panic_detection_YOLO/panic_detection_YOLO_in_temple/prediction(panic)_on_live_feed.py`
+- Temple panic detection (video): `panic_detection_YOLO/panic_detection_YOLO_in_temple/prediction(panic)_on_video.py`
+- Alarm handling: `panic_detection_YOLO/panic_detection_YOLO_in_barricade/alarm.py`
 - Detection weights: `yolov8*.pt`, `yolov8n.onnx`
 
 ---
@@ -292,22 +292,11 @@ Example payload:
 
 ## B) Panic Detection (Barricade)
 ```bash
-cd panic_detection/panic_detection_in_barricade
+cd Machine_learning/panic_detection_YOLO/
 python panic.py
 ```
 Press `q` to exit.
 
-## C) Panic Detection (Temple Live Feed)
-```bash
-cd panic_detection/panic_detection_in_temple
-python "prediction(panic)_on_live_feed.py"
-```
-
-## D) Panic Detection (Temple Video)
-```bash
-cd panic_detection/panic_detection_in_temple
-python "prediction(panic)_on_video.py"
-```
 
 ---
 
